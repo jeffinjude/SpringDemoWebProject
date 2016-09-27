@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util
+		http://www.springframework.org/schema/util/spring-util-3.2.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+	
+	<bean id="userDetailsDao" class="com.springdemo.dao.UserDetailsDao">
+		<property name="userDetails" ref="userDetails"/>
+	</bean>
+	<bean id="userDetails" class="com.springdemo.models.UserDetails">
+		<property name="userId" value="0"/>
+		<property name="userName" value="DefaultUserName"/>
+		<property name="phoneNumber" value="0000000000"/>
+	</bean>
+	
+</beans>
